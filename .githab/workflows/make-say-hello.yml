@@ -1,0 +1,20 @@
+# file: .github/workflows/make-say-hello.yml
+name: Make Say Hello Workflow
+# on – определяет события, которые запускают workflow
+on: push
+
+jobs:
+  # build – произвольно выбранное имя задания
+  build:
+    # операционная система для работы workflow
+    runs-on: ubuntu-latest
+    
+    steps: # список шагов, которые надо выполнить
+      # экшен — выполняет какую-то задачу
+      # checkout — клонирует репозиторий
+      - uses: actions/checkout@v4
+      
+      # run – произвольная bash-команда
+      # Вместо ls -la из урока, используем make say-hello
+      - name: Execute make say-hello
+        run: make say-hello

@@ -16,5 +16,4 @@ jobs:
       
       # run – произвольная bash-команда
       # Вместо ls -la из урока, используем make say-hello
-      - name: Execute make say-hello
-        run: make say-hello
+      - run: make say-hello
